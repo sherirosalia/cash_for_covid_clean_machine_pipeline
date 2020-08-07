@@ -4,7 +4,7 @@
 This is an analysis of government issued data documenting small businesses forgiveable loans offered during Covid to assist in retaining employees.
 
 ### Workbook on Tableau Public
-Click on this <a href='https://public.tableau.com/profile/cerejarosinha#!/vizhome/ppp_loan_analysis/LoansbyLender?publish=yes'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>to see deployment. 
+Click on this <a href='https://public.tableau.com/profile/cerejarosinha#!/vizhome/ppp_loan_analysis/LoansbyLender?publish=yes'><strong>PPP Loan Maps and Preliminary Analysis</strong></a> to see deployment. 
 
 ### Limitation of the dataset
 Nationwide loans are visualized for over $150,000 and only California data was used for under that.
