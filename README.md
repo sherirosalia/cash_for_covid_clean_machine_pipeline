@@ -21,7 +21,7 @@ Even at this light stage of analysis, there have been some insights gleaned.
 - The median loan amount was roughly the same as the average for women namely 34k, but male owned businesses borrowed 41k and Veterans the lowest average amount at about 21k. 
 - Amongst racial groupings, based on those who responded, the number of Asians who borrowed was double the count of Hispanics despite being a smaller percentage of the population. 
 
-Of course there are many potential pitfalls to the above. For example, most borrowers declined to state their race, gender and military service status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
+Of course there are potential pitfalls to the above. For example, most borrowers declined to state their race, gender and military service status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
 
 ### Tableau Public
 Tableau Public link is here:  <a href='https://public.tableau.com/profile/cerejarosinha#!/vizhome/ppp_loan_analysis/LoansbyLender?publish=yes'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
@@ -36,12 +36,12 @@ Tableau Public link is here:  <a href='https://public.tableau.com/profile/cereja
 ### Folder Structure
 Root:
 - Readme.md
-img:
-- California and US large loan #### map
+### img:
+- California and US large loan map
 - Female business owners with loans under $150k
 #### Tableau:
 - Tableau Desktop (.twbx ) includes a data extract.
-pandas_csv_cleaning:
+#### pandas_csv_cleaning:
 - Transformation pipline contained in a series of notebooks.
 #### python_csv:
 - Python script enabling union of the loan data csv files for individual states from Small Business Administration.
@@ -60,6 +60,6 @@ pandas_csv_cleaning:
 ### California map analysis - top lenders
 ![](img/PPP_stimulus_california.png)
 
-### Where the ladies are - female business recipients
+### Where the ladies are - female business loan recipients
 ![](img/ladies.png)
 
