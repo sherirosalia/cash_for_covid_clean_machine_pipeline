@@ -1,18 +1,19 @@
 # PPP_Covid_Stimulus
 
 ### PPP loans - stimulus money exploration
-This project aims to explore and analyze the "Paycheck Protection Program" loan data recently released by the Small Business Association.  Otherwise known as "PPP", these potentially forgivable loans are part of the Covid relief package authored by the US Government in an attempt to assist businesses to retain employees and "stay in business". 
+This project aims to explore and analyze the "Paycheck Protection Program" loan data released by the Small Business Association and made publically available by the U.S. Treasury Department. Otherwise known as "The PPP", these potentially forgivable loans are part of a covid relief package authored by the US Congress in an attempt to assist establishments to retain employees and "stay in business". 
 
 ### The data 
-Over 4 million rows of data resulted from a compilation of the 51 CSV files that the US Treasury made public  <a href='https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data'><strong>available</strong></a>. 50 CSV files have state specific, anonymized information about loans up to 150k. The one remaining CSV is nationwide and reveals the identities of the borrowers of larger loans that go into the millions.
+Over 4 million rows of data resulted from a compilation of the 51 CSV files downloaded <a href='https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data'><strong>here</strong></a>. 50 CSV files have state specific, anonymized information about loans up to 150k. The one remaining CSV is nationwide and reveals the identities of the borrowers who took out loans that go into the millions.
 
 ### The approach
 Python was used to join the 50 state CSV files and Python Pandas to clean and normalize the data. Taking advantage of the extra horsepower afforded by Google Colab, a preliminary analysis and export of the tightest data (people_ppp.csv) was done using PySpark. Workbooks and scripts are in this repository.
 
-### Analysis
-Currently in process, but a few visualizations for the State of California and the one Nationwide CSV file are in Tableau Public. These were done before combining all of the state data. 
-
+### The plan
 Next steps are to run the people_ppp.csv which as of now is about 300k rows through a machine learning package or two and do a deeper dive into the entire dataset which even after munging is about 4 million rows and looks promising.
+
+### Analysis
+This project is currently in progess, but a few visualizations are deployed in Tableau Public and available to view. This was done before combining all of the state data, so it reflects state data from California and loans above 150k for the nation.
 
 Even at this light stage of analysis, there have been some insights gleaned. 
 - The largest lenders are for the most part "brick and mortar", household names such as Wells Fargo and Bank of America, but there are a few Fintech companies that made the top 10 such as PayPal and Square. 
