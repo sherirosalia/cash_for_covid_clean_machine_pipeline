@@ -13,10 +13,11 @@ Python was used to join the 50 state CSV files and Python Pandas to clean and no
 Next steps are to run the people_ppp.csv which as of now is about 300k rows through a machine learning package or two and do a deeper dive into the entire dataset which even after munging is about 4 million rows and looks promising.
 
 ### Analysis
-This project is currently in progess, but a few visualizations are deployed in Tableau Public and available to view. This was done before combining all of the state data, so it reflects state data from California and loans above 150k for the nation.
+This project is currently in progess, but a few visualizations are deployed in Tableau Public and available to view which were done before combining all of the state data, so it reflects only information about smaller loans that were dispersed in  California. The nationwide map displays locations granted over 150k.
 
-Even at this light stage of analysis, there have been some insights gleaned. 
+Even at this light stage of analysis, there have been some insights gleaned.
 - The largest lenders are for the most part "brick and mortar", household names such as Wells Fargo and Bank of America, but there are a few Fintech companies that made the top 10 such as PayPal and Square. 
+- Machine learning processing suggests that business type category carries the most weight in terms of the amount of money lent. Race, gender and military status may not.
 - The median loan amount was roughly the same as the average for women namely 34k, but male owned businesses borrowed 41k and Veterans the lowest average amount at about 21k. 
 - Amongst racial groupings, based on those who responded, the number of Asians who borrowed was double the count of Hispanics despite being a smaller percentage of the population. 
 
@@ -30,24 +31,35 @@ Tableau Public link is here:  <a href='https://public.tableau.com/profile/cereja
 - Tableau
 - PySpark
 - Python
+- Scikit-learn
 
 ### Folder Structure
 Root:
 - Readme.md
-- Screenshot of map visualization
-Tableau:
+img:
+- California and US large loan #### map
+- Female business owners with loans under $150k
+#### Tableau:
 - Tableau Desktop (.twbx ) includes a data extract.
 pandas_csv_cleaning:
 - Transformation pipline contained in a series of notebooks.
-python_csv
+#### python_csv:
 - Python script enabling union of the loan data csv files for individual states from Small Business Administration.
-pyspark_analysis:
+#### pyspark_analysis:
 - Preliminary exploration of the cleaned data and production of people_ppp.csv file.
+
+#### random_forest:
+- Notebook using Pandas.
+- Machine learning preparation of data.
+- Random Forest regression using Scikit-learn.
 
 ### Deployment
 - Download the files from the US Treasury linked above, deploy the script in "python_csv" and then run the resulting CSV file through "clean.ipynb" in the "pandas_csv_cleaning" folder. Notes indicate which notebooks to run sequentially. 
 - PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
 
 ### California map analysis - top lenders
-![](PPP_stimulus_california.png)
+![](img/PPP_stimulus_california.png)
+
+### Where the ladies are - female business recipients
+![](img/ladies.png)
 
