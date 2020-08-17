@@ -15,20 +15,20 @@ Currently in process, but a few visualizations for the State of California and t
 Next steps are to run the people_ppp.csv which as of now is about 300k rows through a machine learning package or two and do a deeper dive into the entire dataset which even after munging is about 4 million rows and looks promising.
 
 Even at this light stage of analysis, there have been some insights gleaned. 
-- The largest lenders are for the most part "brick and mortar" names such as Wells Fargo and Bank of America, but there are a few Fintech companies that made the top 10 such as PayPal and Square. 
+- The largest lenders are for the most part "brick and mortar", household names such as Wells Fargo and Bank of America, but there are a few Fintech companies that made the top 10 such as PayPal and Square. 
 - The median loan amount was roughly the same as the average for women namely 34k, but male owned businesses borrowed 41k and Veterans the lowest average amount at about 21k. 
 - Amongst racial groupings, based on those who responded, the number of Asians who borrowed was double the count of Hispanics despite being a smaller percentage of the population. 
 
-Of course there are many potential pitfalls to the above. For example most borrowers declined to state their race, gender and Veteran status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
+Of course there are many potential pitfalls to the above. For example, most borrowers declined to state their race, gender and military service status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
 
 ### Tableau Public
 Tableau Public link is here:  <a href='https://public.tableau.com/profile/cerejarosinha#!/vizhome/ppp_loan_analysis/LoansbyLender?publish=yes'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
 
 ### Frameworks
-Python Pandas
-Tableau
-PySpark
-Python
+- Python Pandas
+- Tableau
+- PySpark
+- Python
 
 ### Folder Structure
 Root:
@@ -41,8 +41,12 @@ pandas_csv_cleaning:
 python_csv
 - Python script enabling union of the loan data csv files for individual states from Small Business Administration.
 pyspark_analysis:
-- Preliminary exploration of the cleaned data  and production of people_ppp.csv file.
+- Preliminary exploration of the cleaned data and production of people_ppp.csv file.
 
+### Deployment
+- Download the files from the US Treasury linked above, deploy the script in "python_csv" and then run the resulting CSV file through "clean.ipynb" in the "pandas_csv_cleaning" folder. Notes indicate which notebooks to run sequentially. 
+- PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
 
 ### California map analysis - top lenders
 ![](PPP_stimulus_california.png)
+
