@@ -10,7 +10,7 @@ Over 4 million rows of data resulted from a compilation of the 51 CSV files down
 Python was used to join the 50 state CSV files and Python Pandas to clean and normalize the data. Taking advantage of the extra horsepower afforded by Google Colab, a preliminary analysis and export of the tightest data (people_ppp.csv) was done using PySpark. Workbooks and scripts are in this repository.
 
 ### The plan
-Next steps are to run the people_ppp.csv which as of now is about 300k rows through a machine learning package or two and do a deeper dive into the entire dataset which even after munging is about 4 million rows and looks promising.
+Deeper dive into the data which is roughly 4 million rows and spread over several tables. Along with maps, graphs and tables the hope and fun is in finding unforeseen revelations and new lines of inquiry.
 
 ### Analysis
 This project is currently in progess, but a few visualizations are deployed in Tableau Public and available to view which were done before combining all of the state data, so it reflects only information about smaller loans that were dispersed in  California. The nationwide map displays locations granted over 150k.
