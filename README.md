@@ -36,7 +36,7 @@ Tableau Public link is here:  <a href='https://public.tableau.com/profile/cereja
 ### Folder Structure
 Root:
 - Readme.md
-### img:
+#### img:
 - California and US large loan map
 - Female business owners with loans under $150k
 #### Tableau:
