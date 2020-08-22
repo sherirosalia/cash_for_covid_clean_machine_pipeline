@@ -60,6 +60,6 @@ Root:
 ### California map analysis - top lenders
 ![](img/PPP_stimulus_california.png)
 
-### Where the ladies are - female business loan recipients
-![](img/ladies.png)
+### Pink or blue? Loans by gender.
+![](img/gemder_usa.png)
 
