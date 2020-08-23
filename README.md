@@ -1,4 +1,4 @@
-# PPP_Covid_Stimulus
+# Small business cash for covid under the "Paycheck Protection Program"
 
 ### PPP loans - stimulus money exploration
 This project aims to explore and analyze the "Paycheck Protection Program" loan data released by the Small Business Association and made publically available by the U.S. Treasury Department. Otherwise known as "The PPP", these potentially forgivable loans are part of a covid relief package authored by the US Congress in an attempt to assist establishments to retain employees and "stay in business". 
