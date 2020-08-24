@@ -99,20 +99,23 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>The data and approach</h2>
-                        <p> The information came from the SBA in two basic formats. Loans above 150k revealed enterprise names, but not loan amounts which 
+                        <p> The information came from the SBA in two formats. The largest dataset numbering 4.3 million
+                            rows provided anonymized information about loans below $150k along with specific borrowing amounts.
+                            On the other hand, for amounts over that threshold, enterprise names were revealed but instead 
+                             above 150k revealed enterprise names, but not advanced amounts which 
                             were instead divided into broad categories such as $3 to $5 million.
-                            On the other hand, privacy protections were afforded to borrowers of loans under the $150k mark but
-                            the amounts were specified.
+
                         </p>
                         <p> Lending institution, business type and geographic location were consistent throughout
                             both datasets and approximately 5% of the borrowers supplied gender, racial identity and military status which 
                             may not sound like a lot but in a dataset as large as this, the hope is that it reflects general trends and
-                            so it was split off into a separate dataset.
+                            that information while analyzed in aggregate was also duplicated and split off into a separate dataset.
                         </p>
 
                         <p>
-                            Business type information came in the form of numerical NAICS codes but merging those with US Census 
-                            converted them into industry names and subcategories. 
+                            Business type information came in the form of numerical NAICS codes which provided no context, 
+                            fortunately information from US Census allowed the  
+                            convert the keys into industry names and subcategories. 
 
                         </p>
                     </div>
@@ -139,11 +142,17 @@
                     <div class="col-md-12">
                         <h2>Initial analysis</h2>
                         <p>The data suggests that nearly $8000 dollars from the smaller loans was available to go towards saving a job, while the larger
-                            loan set indicates that only $2000 could. This is based on calculations infered by from statements Steve Mnuchin 
-                            made that the sum of the loans in the larger amount category account for 75% of the total lent but only accounting for 13% of borrowers.
-                            Additionally, the machine learning model suggests that the most important factor in how much money is lent
+                            loan set indicates that only $2000 could. This is based on calculations infered from statements Steve Mnuchin 
+                            made, namely that the sum of the loans over $150k account for 75% of the total lent and it was borrowed by only 
+                            13% of borrowers. Since the purpose of the loan was to help businesses save employees over a minimum of a 
+                            6 week period, the question arises as to how effective $2000 per job would be in helping employees as opposed to 
+                            the smaller loans which had a higher amount to person ratio.
+
+                        </p>
+                        <p>
+                            Further supporting the idea that larger loans may have been less effective, the machine learning model suggests that the most important factor in how much money is lent
                             is correlated to the number of jobs saved and so it looks like the lower the number of jobs saved per dollar, the higher
-                            the loan amount.
+                            the loan amount. 
                         </p>
                     </div>
                 </div>
@@ -176,11 +185,11 @@
                     <div class="col-md-12">
                         <h2>Businesses loans and the jobs saved.</h2>
                         <p>The pie charts below reflect the loan volume in each general job category along with 
-                            the jobs saved helping to evaluate where the money went and which industries helped 
-                            the greatest number of jobs. For example, the visualizations suggest that
+                            the jobs saved. This helps to evaluate where the money went and which industries supported 
+                            retention of the greatest number of jobs. For example, the visualizations suggest that
                             the  "Acommodation and Food Services" category saved the greatest percentage of 
-                            employees in proportion to how much was borrowed and "Construction" looks to be the reverse
-                            borrowing more and saving fewer positions.</p>
+                            employees in proportion to how much was borrowed and "Construction" looks to be the reverse. 
+                        </p>
                     </div>
                 </div>
                 
@@ -210,8 +219,8 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h2>The Banks</h2>
                     <p>
-                        For smaller loans, the expected names took top place for the most loans issued 
-                        such as Chase and Bank of America but financial tech organizations such as 
+                        Bank of America and JP Morgan Chase were at the top of the list of lenders by count of loans, 
+                        but financial tech organizations such as 
                         Kabbage and Celtic Bank made a strong showing. 
  
                     </p>
@@ -255,17 +264,27 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <!-- explanation/intro -->
                             <h2>The next step</h2>
-                            <p>
-                            There is a lot here, and the purpose of this project was to merge, clean and utilize the benefits of 
-                            big data tools to let do some "heavy 
-                            lifting" of this relatively large dataset to gauge whether and where it 
-                            merits granularity. General findings suggest that it does and some lines of inquiry are inspired by racial
-                            and gender findings. For example, in the loans under $150k, Asians borrowed almost twice as much while only
-                            being one third of the Hispanic population. There could be any number of reasons for this but examining
+                            <p> There is a lot here, and the number of lines of inquiry seem potentially endless. A few ideas 
+                                are to obtain granularity on loan dispersement per job saved in various categories, regional lending 
+                                differences such as rural
+                                vs urban, differences between banks in various states. 
+                                
+                            One race based observation for loans under $150k 
+                                is that Asians borrowed almost twice as much as Hispanics did while only
+                            being one third the size of the Hispanic population. There could be any number of reasons for this but examining
                             rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
                             Additionally, it is 
                             possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.
   
+                            </p>
+                            <p>
+                                One race based observation for loans under $150k 
+                                is that Asians borrowed almost twice as much as Hispanics did while only
+                            being one third the size of the Hispanic population. There could be any number of reasons for this but examining
+                            rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
+                            Additionally, it is 
+                            possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.
+   
                             </p>
                             <p>
                             The above being said, the next step in the process is using SQL relational databases for ease of combining sources 
