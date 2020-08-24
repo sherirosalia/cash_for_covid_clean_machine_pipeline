@@ -13,61 +13,112 @@
     <title>Cash for Covid</title>
   </head>
   <body>
-    <!-- first container  -->
-    <container class="fluid">  
+    <!-- first wrapper container  -->
+<!-- <div class="container-fluid">   -->
 
-        <div class="jumbotron sticky-top bg-dark text-white">
-            <h1>Cash for covid</h1>            
-            <p class="lead text-white">Where did the Paycheck Protection Program money go?</p> 
-            <p class="lead text-white"></p>              
-        </div>
+    <div class="jumbotron sticky-top bg-dark text-white">
+        <h1>Cash for covid</h1>            
+        <p class="lead text-white">Where did the Paycheck Protection Program money go?</p> 
+        <p class="lead text-white"></p>              
+    </div>
         <!-- end of jumbotron and beginning of content container -->
+
+    <div class="container">
+            <!-- beginning of intro -->
         <div class="container">
-            <!-- beginning of the two containers to hold first image and initial explanation -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <!-- explanation/intro -->
-                        <p>
-                            With the release of small business lending information from the US Treasury in conjunction with the Small Business Association,
-                            there is unprecedented access to data that allows a glimpse into the types of buisnesses and people
-                            affected by the coronavirus crisis. 
-                        </p>
-                        <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
-                        and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
-                        <p> GitHub repository:  
-                        <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine'>Cash for Covid, Clean Machine</a>.
-                        </p>
-                        <p> Data Source:  
-                        <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
-                        </p>
-                        
-                        <p>
-                            It seems that no section of the country was untouched by small businesses seeking relief from the 
-                            effects of the shutdown. The visualization below displays a representation male vs.
-                            female recipients of loans granted as part of the C.A.R.E.S. act, represents 
-                            a mere 5% of total since most borrowers declined to state their gender. The size of the bubbles 
-                            increase with count and males show in blue and women in pink. 
-                        </p>
-                    </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p>
+                        It seems that no section of the country was untouched by small businesses seeking relief from the 
+                        effects of the shutdown. The visualization below displays a representation male vs.
+                        female recipients of loans granted as part of the C.A.R.E.S. act, represents 
+                        a mere 5% of total since most borrowers declined to state their gender. The size of the bubbles 
+                        increase with count and males show in blue and women in pink. 
+                    </p>
+
                 </div>
             </div>
-        <!-- image -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <img src="../images/gender_usa.png" alt="nationwide">            
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>    
-            </div>
-            <!-- end of explanation area and first image -->
+        </div>
 
-            <div class="container">
+        <!-- end of first introduction  -->
+                <!-- beginning of container for national image -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <img src="images/gender_usa.png" class="mx-auto d-block img-fluid" alt="nationwide">
+                        </div>
+                    </div>
+                </div>
+                <!-- end of national image -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <!-- explanation/intro -->
+                    <p>
+                        With the release of small business lending information from the US Treasury in conjunction with the Small Business Association,
+                        there is unprecedented access to data that allows a glimpse into the types of buisnesses and people
+                        affected by the coronavirus crisis. 
+                    </p>
+                    <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
+                    and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
+                    <p> GitHub repository:  
+                    <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine'>Cash for Covid, Clean Machine</a>.
+                    </p>
+                    <p> Data Source:  
+                    <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- end of intro area container -->
+               <!-- beginning of machine learning and pyspark  -->
+               <div class="container">
                 <!-- area to explain pie charts -->
                 <div class="row">
                     <div class="col-md-12">
+                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
+                                quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
+                                delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
+                    </div>
+                </div>
+                <!-- pyspark -->
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="images/top_bank_list.png" alt="loans by category">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <!-- ml results -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
+                                quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
+                                delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="images/small_loans_all_states.png" alt="jobs saved category">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>  
+            <!-- end of pie chart container -->
+        </div>
+
+        <!-- beginning of pie charts -->
+        <div class="container">
+                <!-- area to explain pie charts -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
                                 quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
                                 delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
@@ -77,7 +128,7 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <img class="img-fluid" src="../images/loans_cat.png" alt="loans by category">
+                        <img class="img-fluid" src="images/loans_cat.png" alt="loans by category">
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -85,7 +136,7 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <img class="img-fluid" src="../images/jobs_saved_cat.png" alt="jobs saved category">
+                        <img class="img-fluid" src="images/jobs_saved_cat.png" alt="jobs saved category">
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -93,17 +144,69 @@
             <!-- end of pie chart container -->
         </div>
 
+        <!-- banks beginning -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h2>The Banks</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quae neque perspiciatis vitae cumque minima, maxime saepe 
+                        aliquid exercitationem laborum hic assumenda totam rem eos qui harum nemo optio blanditiis.
+ 
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- end of intro to banks -->
+                <!-- beginning of container for national image -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <img src="images/top_lenders_small_loans.png" class="mx-auto d-block img-fluid" alt="nationwide">
+                        </div>
+                    </div>
+                </div>
+                <!-- end of bank graph image -->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <!-- explanation/intro -->
+                            <h2>The findings</h2>
+                            <p>
+                                With the release of small business lending information from the US Treasury in conjunction with the Small Business Association,
+                                there is unprecedented access to data that allows a glimpse into the types of buisnesses and people
+                                affected by the coronavirus crisis. 
+                            </p>
+                            <h2>The next step</h2>
+                            <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
+                            and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
+                            <p>Analysis Repository:  
+                            <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine'>Cash for Covid, Clean Machine</a>.
+                            </p>
+                            <p> Some other thing:  
+                            <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
 
 
 
-        <footer class="bg-dark text-white page-footer ">
-            <div class="text-center py-3">
-                <p class='text-white'>2020 Copyright  &copy;    Sheri Rosalia <a href="http://www.sherirosalia.com"><img src ="../images/rose2.png"  style="margin-top: 1.25em; height: 2em; width:2em;" alt="rose logo"></a></p>
 
-            </div>  
+    </div> 
+ <!-- end of main content div -->
+    <footer class="bg-dark text-white page-footer ">
+        <div class="text-center py-3">
+            <p class='text-white'>2020 Copyright  &copy;    Sheri Rosalia <a href="http://www.sherirosalia.com"><img src ="../images/rose2.png"  style="margin-top: .25em; height: 2em; width:2em;" alt="rose logo"></a></p>
+        </div>  
 
-        </footer>    
-    </div>   
+    </footer>    
+<!-- </div>  -->
+<!-- closing div for fluid container/wrapper -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
