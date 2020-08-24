@@ -98,12 +98,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>The data and approach</h2>
-                        <p> The information came from the SBA in two formats. The largest dataset numbering 4.3 million
-                            rows provided anonymized information about loans below $150k along with specific borrowing amounts.
-                            On the other hand, for amounts over that threshold, enterprise names were revealed but instead 
-                             above 150k revealed enterprise names, but not advanced amounts which 
-                            were instead divided into broad categories such as $3 to $5 million.
-
+                        <p> The information came from the SBA in two formats: The largest dataset numbering 4.3 million
+                            rows provided loan amount information but the borrower names were withheld.
+                            Enterprise names were revealed for lending above $150k and the debt was put into categorical range 
+                            such as $3 to $5 million instead of a specific tally.
                         </p>
                         <p> Lending institution, business type and geographic location were consistent throughout
                             both datasets and approximately 5% of the borrowers supplied gender, racial identity and military status which 
@@ -140,12 +138,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h2>Initial analysis</h2>
-                        <p>The data suggests that nearly $8000 dollars from the smaller loans was available to go towards saving a job, while the larger
-                            loan set indicates that only $2000 could. This is based on calculations infered from statements Steve Mnuchin 
-                            made, namely that the sum of the loans over $150k account for 75% of the total lent and it was borrowed by only 
-                            13% of borrowers. Since the purpose of the loan was to help businesses save employees over a minimum of a 
-                            6 week period, the question arises as to how effective $2000 per job would be in helping employees as opposed to 
-                            the smaller loans which had a higher amount to person ratio.
+                        <p>The purpose of the loans was to help businesses save jobs. The potential expenditure per capita  of funds for the larger
+                            loan amounts came in at $2,000 and the under $150k disbursements at $8,000 per job saved. This assessment is 
+                             based on calculations infered from statements Steve Mnuchin 
+                            made, namely that the sum of the loans over $150k account for 75% of the total lent  was borrowed by only 
+                            13% of enterprises.  As a result, the question arises as to how effective $2000 per job would be in helping employees in comparison
+                            to the smaller business loans which had a higher amount to person ratio.
 
                         </p>
                         <p>
@@ -266,15 +264,7 @@
                             <p> There is a lot here, and the number of lines of inquiry seem potentially endless. A few ideas 
                                 are to obtain granularity on loan dispersement per job saved in various categories, regional lending 
                                 differences such as rural
-                                vs urban, differences between banks in various states. 
-                                
-                            One race based observation for loans under $150k 
-                                is that Asians borrowed almost twice as much as Hispanics did while only
-                            being one third the size of the Hispanic population. There could be any number of reasons for this but examining
-                            rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
-                            Additionally, it is 
-                            possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.
-  
+                                vs urban, differences between banks in various states.
                             </p>
                             <p>
                                 One race based observation for loans under $150k 
@@ -282,15 +272,12 @@
                             being one third the size of the Hispanic population. There could be any number of reasons for this but examining
                             rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
                             Additionally, it is 
-                            possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.
-   
+                            possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.   
                             </p>
                             <p>
                             The above being said, the next step in the process is using SQL relational databases for ease of combining sources 
                             and to visualize the results with Tableau. The repository for these applications is linked below.
-                            </p>
-                            <h2>The next step</h2>
-                            <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
+                            </p> Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
                             and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
                             <p>Analysis Repository:  
                             <a href='https://github.com/sherirosalia/cash_for_covid_deep_dive'>Cash for covid, deep dive</a>.
