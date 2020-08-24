@@ -27,13 +27,17 @@
             <!-- beginning of intro -->
         <div class="container">
             <div class="row">
+                
                 <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h2>Unprecedented access to small business loan data</h2>
                     <p>
-                        It seems that no section of the country was untouched by small businesses seeking relief from the 
-                        effects of the shutdown. The visualization below displays a representation male vs.
-                        female recipients of loans granted as part of the C.A.R.E.S. act, represents 
-                        a mere 5% of total since most borrowers declined to state their gender. The size of the bubbles 
-                        increase with count and males show in blue and women in pink. 
+                        It seems that no section of the country was untouched by enterpreneurs seeking relief from the 
+                        effects of the government shutdown in reaction to the Coronavirus. The release of
+                        lending records from the US Treasury in conjunction with the Small Business Association,
+                         albeit under unfortunate circumstances,
+                        allows an unusual glimpse into small businesses
+                        affected by the crisis.
+. 
                     </p>
 
                 </div>
@@ -45,7 +49,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <img src="images/gender_usa.png" class="mx-auto d-block img-fluid" alt="nationwide">
+                            <figure>
+                            <img src="images/gender_usa.png" class="mx-auto d-block img-fluid figure-image" alt="nationwide">
+                            <figcaption class="figure-caption">Sample representation of male (blue) vs. female (pink) loan distribution.</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -56,13 +63,14 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <!-- explanation/intro -->
+                    <h2>Wrangling the data</h2>
                     <p>
-                        With the release of small business lending information from the US Treasury in conjunction with the Small Business Association,
-                        there is unprecedented access to data that allows a glimpse into the types of buisnesses and people
-                        affected by the coronavirus crisis. 
+                    Over 50 CSV files were merged using a Python programming
+                    script to automate the process. Pyspark leveraged Hadoop to speed up processing 5 million loan records and 
+                    application of random forest machine learning algorithm and visualizations were produced with Python Pandas.
+                    The full code and explanation of how to access the data records is in the repository linked below this paragraph.
                     </p>
-                    <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
-                    and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
+
                     <p> GitHub repository:  
                     <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine'>Cash for Covid, Clean Machine</a>.
                     </p>
@@ -72,6 +80,17 @@
                     
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <figure>
+                    <img class="img-fluid figure-image" src="images/small_loans_all_states.png" alt="random forest output">
+                    <figcaption class="figure-caption">Machine learning suggests the number of jobs saved has the strongest correlation to loan amounts.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
         </div>
         <!-- end of intro area container -->
                <!-- beginning of machine learning and pyspark  -->
@@ -79,56 +98,97 @@
                 <!-- area to explain pie charts -->
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
-                                quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
-                                delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
+                        <h2>The data and approach</h2>
+                        <p> The information came from the SBA in two basic formats. Loans above 150k revealed enterprise names, but not loan amounts which 
+                            were instead divided into broad categories such as $3 to $5 million.
+                            On the other hand, privacy protections were afforded to borrowers of loans under the $150k mark but
+                            the amounts were specified.
+                        </p>
+                        <p> Lending institution, business type and geographic location were consistent throughout
+                            both datasets and approximately 5% of the borrowers supplied gender, racial identity and military status which 
+                            may not sound like a lot but in a dataset as large as this, the hope is that it reflects general trends and
+                            so it was split off into a separate dataset.
+                        </p>
+
+                        <p>
+                            Business type information came in the form of numerical NAICS codes but merging those with US Census 
+                            converted them into industry names and subcategories. 
+
+                        </p>
                     </div>
                 </div>
-                <!-- pyspark -->
+               </div>
+
+                <!-- <div class="container">
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <img class="img-fluid" src="images/top_bank_list.png" alt="loans by category">
+                        <figure>
+                            <img class="img-fluid figure-image" src="images/demographic.png" alt="jobs saved category">
+                            <figcaption class="figure-caption">Demographics loans under $150k</figcaption>
+                            </figure>
+
                     </div>
                     <div class="col-md-2"></div>
                 </div>
-                <!-- ml results -->
+            </div> -->
+            <div class="container">
+
+                <!-- pyspark -->
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
+                        <h2>Initial analysis</h2>
+                        <p>The data suggests that nearly $8000 dollars from the smaller loans was available to go towards saving a job, while the larger
+                            loan set indicates that only $2000 could. This is based on calculations infered by from statements Steve Mnuchin 
+                            made that the sum of the loans in the larger amount category account for 75% of the total lent but only accounting for 13% of borrowers.
+                            Additionally, the machine learning model suggests that the most important factor in how much money is lent
+                            is correlated to the number of jobs saved and so it looks like the lower the number of jobs saved per dollar, the higher
+                            the loan amount.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- ml results -->
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <h2>The findings</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
                                 quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
                                 delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
                     </div>
-                </div>
-                <div class="row">
+                </div> -->
+                <!-- <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <img class="img-fluid" src="images/small_loans_all_states.png" alt="jobs saved category">
                     </div>
                     <div class="col-md-2"></div>
-                </div>
-            </div>  
+                </div> -->
+            <!-- </div>   -->
             <!-- end of pie chart container -->
-        </div>
+        
 
         <!-- beginning of pie charts -->
         <div class="container">
                 <!-- area to explain pie charts -->
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Lorem ipsum  distinctio fugit impedit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur quia nostrum 
-                                quis similique earum nam ab molestias enim culpa quaerat officia fugit, 
-                                delectus commodi sint voluptatem laborum consequuntur? Dolore.</p>
+                        <h2>Businesses loans and the jobs saved.</h2>
+                        <p>The pie charts below reflect the loan volume in each general job category along with 
+                            the jobs saved helping to evaluate where the money went and which industries helped 
+                            the greatest number of jobs. For example, the visualizations suggest that
+                            the  "Acommodation and Food Services" category saved the greatest percentage of 
+                            employees in proportion to how much was borrowed and "Construction" looks to be the reverse
+                            borrowing more and saving fewer positions.</p>
                     </div>
                 </div>
+                
                 <!-- first pie chart -->
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <img class="img-fluid" src="images/loans_cat.png" alt="loans by category">
+                        <img class="img-fluid" src="images/loans_cat.png" alt="pie chart of loans by category">
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -136,13 +196,13 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <img class="img-fluid" src="images/jobs_saved_cat.png" alt="jobs saved category">
+                        <img class="img-fluid" src="images/jobs_saved_cat.png" alt="pie chart jobs saved category">
                     </div>
                     <div class="col-md-2"></div>
                 </div>
             </div>  
             <!-- end of pie chart container -->
-        </div>
+        <!-- </div> -->
 
         <!-- banks beginning -->
         <div class="container">
@@ -150,45 +210,76 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h2>The Banks</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quae neque perspiciatis vitae cumque minima, maxime saepe 
-                        aliquid exercitationem laborum hic assumenda totam rem eos qui harum nemo optio blanditiis.
+                        For smaller loans, the expected names took top place for the most loans issued 
+                        such as Chase and Bank of America but financial tech organizations such as 
+                        Kabbage and Celtic Bank made a strong showing. 
  
                     </p>
 
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <figure>
+                        <img class="img-fluid figure-image" src="images/top_bank_list.png" alt="jobs saved category">
+                        <figcaption class="figure-caption">List of lenders descending by count</figcaption>
+                    </figure>
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <figure>
+                        <img class="img-fluid figure-image" src="images/top_lenders_small_loans.png" alt="jobs saved category">
+                        <figcaption class="figure-caption">Banks for loans under $150k</figcaption>
+                    </figure>
+
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
 
         <!-- end of intro to banks -->
-                <!-- beginning of container for national image -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <img src="images/top_lenders_small_loans.png" class="mx-auto d-block img-fluid" alt="nationwide">
-                        </div>
-                    </div>
-                </div>
+
                 <!-- end of bank graph image -->
 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <!-- explanation/intro -->
-                            <h2>The findings</h2>
+                            <h2>The next step</h2>
                             <p>
-                                With the release of small business lending information from the US Treasury in conjunction with the Small Business Association,
-                                there is unprecedented access to data that allows a glimpse into the types of buisnesses and people
-                                affected by the coronavirus crisis. 
+                            There is a lot here, and the purpose of this project was to merge, clean and utilize the benefits of 
+                            big data tools to let do some "heavy 
+                            lifting" of this relatively large dataset to gauge whether and where it 
+                            merits granularity. General findings suggest that it does and some lines of inquiry are inspired by racial
+                            and gender findings. For example, in the loans under $150k, Asians borrowed almost twice as much while only
+                            being one third of the Hispanic population. There could be any number of reasons for this but examining
+                            rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
+                            Additionally, it is 
+                            possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.
+  
+                            </p>
+                            <p>
+                            The above being said, the next step in the process is using SQL relational databases for ease of combining sources 
+                            and to visualize the results with Tableau. The repository for these applications is linked below.
                             </p>
                             <h2>The next step</h2>
                             <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
                             and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.</p>
                             <p>Analysis Repository:  
-                            <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine'>Cash for Covid, Clean Machine</a>.
+                            <a href='https://github.com/sherirosalia/cash_for_covid_deep_dive'>Cash for covid, deep dive</a>.
                             </p>
-                            <p> Some other thing:  
+                            <!-- <p> Some other thing:  
                             <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
-                            </p>
+                            </p> -->
                             
                         </div>
                     </div>
@@ -201,7 +292,7 @@
  <!-- end of main content div -->
     <footer class="bg-dark text-white page-footer ">
         <div class="text-center py-3">
-            <p class='text-white'>2020 Copyright  &copy;    Sheri Rosalia <a href="http://www.sherirosalia.com"><img src ="../images/rose2.png"  style="margin-top: .25em; height: 2em; width:2em;" alt="rose logo"></a></p>
+            <p class='text-white'>2020 Copyright  &copy;    Sheri Rosalia <a href="http://www.sherirosalia.com"><img src ="images/rose2.png"  style="margin-top: .25em; height: 2em; width:2em;" alt="rose logo"></a></p>
         </div>  
 
     </footer>    

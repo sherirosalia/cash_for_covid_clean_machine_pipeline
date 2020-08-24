@@ -1,0 +1,31 @@
+Stats.... From big loan 31,456,467
+
+57342086000
+
+Cost per = 1852
+
+
+def sum_col(df, col):
+    return df.select(F.sum(col)).collect()[0][0]
+sum_col(df, 'JobsRetained')
+
+
+Jobs saved:  16,502,576
+Loan Amount: 129,191,127,317
+
+
+87/129,191,127,317.94 = 6.7342086e-10
+
+
+
+Cost per job 7828.543090302993
+
+https://www.cnbc.com/2020/07/06/coronavirus-stimulus-list-of-ppp-small-business-loan-recipients-released.html
+
+Those loans represent nearly three-fourths of total loan dollars approved, but a far smaller proportion of the number of actual loans. About 87% of the loans were for less than $150,000, according to the SBA.
+
+
+https://www.bizjournals.com/twincities/news/2020/07/07/bremer-tops-all-banks-for-ppp-loans-of-150k-and-m.html
+
+
+Bremer tops all banks for PPP loans of $150K or more to MN employers
