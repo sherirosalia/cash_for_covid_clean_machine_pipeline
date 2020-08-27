@@ -58,6 +58,6 @@ Root:
 - PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
 
 ### California map analysis - top lenders
-![](img/PPP_stimulus_california.png)
+![](images/PPP_stimulus_california.png)
 
 
