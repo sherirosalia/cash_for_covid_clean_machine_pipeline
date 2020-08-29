@@ -1,22 +1,22 @@
-# Small business cash for covid under the "Paycheck Protection Program"
+## Small business cash for covid under the "Paycheck Protection Program"
 
 ### PPP loans - stimulus money exploration
 This project aims to explore and analyze the "Paycheck Protection Program" loan data released by the Small Business Association and made publically available by the U.S. Treasury Department. Otherwise known as "The PPP", these potentially forgivable loans are part of a covid relief package authored by the US Congress in an attempt to assist establishments to retain employees and "stay in business". 
 
-### Webpage for this project
+#### Webpage for this project
 Cash for covid <a href="https://sherirosalia.github.io/cash_for_covid_clean_machine/">Where did the Paycheck Protection Program money go?</a>
 
-### The data 
+#### The data 
 Almost 5 million rows of data resulted from a compilation of the 51 CSV files downloaded <a href='https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data'><strong>here</strong></a>. 50 CSV files have state specific, anonymized information about loans up to 150k. The one remaining CSV is nationwide and reveals the identities of the borrowers who took out loans that start at $150k and go into the millions.
 
-### Cash for Covid USA - small business loans across the country
+#### Cash for Covid USA - small business loans across the country
 ![](images/gender_usa.png)
 
 
-### The approach
-A Python script joined the 50 state CSV files and Python Pandas was used for the majority of cleanup. Taking advantage of the extra horsepower afforded by Google Colab, a preliminary analysis and export of the most granular data (people_ppp.csv) was done using PySpark. Workbooks and scripts for all of these files are in this repository, but further analysis is to be done with SQL and Tableau..
+#### The approach
+A Python script joined the 50 state CSV files and Python Pandas was used for the majority of cleanup. Taking advantage of the extra horsepower afforded by Google Colab, a preliminary analysis and export of a smaller dataset (people_ppp.csv) was done using PySpark. Workbooks and scripts for all of these files are in this repository, but further analysis is to be done with SQL and Tableau..
 
-### Analysis
+#### Analysis
 Application of the SciKit Random Forest Regressor machine learning and some light evaluation is done here, and further exploration is continued in this repository <a href='https://github.com/sherirosalia/cash_for_covid_deep_dive'><strong>here</strong></a>.
 
 Even at this light stage of analysis, there have been some insights gleaned.
@@ -27,16 +27,16 @@ Even at this light stage of analysis, there have been some insights gleaned.
 
 Of course there are potential pitfalls to the above. For example, most borrowers declined to state their race, gender and military service status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
 
-### Preliminary findings
-Brief explanation and analysis is here:  <a href='https://sherirosalia.github.io/cash_for_covid_clean_machine/'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
+#### Preliminary findings
+Brief explanation and analysis is here:  <a href='https://sherirosalia.github.io/cash_for_covid_clean_machine_pipeline/'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
 
-### Frameworks
+#### Frameworks
 - Python Pandas
 - PySpark
 - Python
 - Scikit-learn
 
-### Folder Structure
+#### Folder Structure
 Root:
 - Readme.md
 #### images:
@@ -57,11 +57,11 @@ values, formatting issues and splits off some infomation about non-profit organi
 - Machine learning preparation of data.
 - Random Forest regression using Scikit-learn.
 
-### Deployment
+#### Deployment
 - Download the files from the US Treasury linked above, deploy the script in "python_csv" and then run the resulting CSV file through "clean.ipynb" in the "pandas_csv_cleaning" folder. Notes indicate which notebooks to run sequentially. 
 - PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
 
-### under_150_pipeline
+#### under_150_pipeline
 - Series of 5 notebooks taking the largest dataset through normalization and light analysis producing a number of smaller csv files along the way.
 
 
