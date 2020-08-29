@@ -23,12 +23,11 @@ Even at this light stage of analysis, there have been some insights gleaned.
 
 Of course there are potential pitfalls to the above. For example, most borrowers declined to state their race, gender and military service status, so the figures above are based only on respondents who answered and this could inaccurately skew results. 
 
-### Tableau Public
-Tableau Public link is here:  <a href='https://public.tableau.com/profile/cerejarosinha#!/vizhome/ppp_loan_analysis/LoansbyLender?publish=yes'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
+### Preliminary findings
+Brief explanation and analysis is here:  <a href='https://sherirosalia.github.io/cash_for_covid_clean_machine/'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
 
 ### Frameworks
 - Python Pandas
-- Tableau
 - PySpark
 - Python
 - Scikit-learn
@@ -39,15 +38,12 @@ Root:
 #### img:
 - California and US large loan map
 - Female business owners with loans under $150k
-#### Tableau:
-- Tableau Desktop (.twbx ) includes a data extract.
 #### pandas_csv_cleaning:
 - Transformation pipline contained in a series of notebooks.
 #### python_csv:
 - Python script enabling union of the loan data csv files for individual states from Small Business Administration.
 #### pyspark_analysis:
 - Preliminary exploration of the cleaned data and production of people_ppp.csv file.
-
 #### random_forest:
 - Notebook using Pandas.
 - Machine learning preparation of data.
