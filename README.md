@@ -35,6 +35,7 @@ Brief explanation and analysis is here:  <a href='https://sherirosalia.github.io
 - PySpark
 - Python
 - Scikit-learn
+- PostgresSQL
 
 #### Folder Structure
 Root:
@@ -57,11 +58,22 @@ values, formatting issues and splits off some infomation about non-profit organi
 - Machine learning preparation of data.
 - Random Forest regression using Scikit-learn.
 
-#### Deployment
-- Download the files from the US Treasury linked above, deploy the script in "python_csv" and then run the resulting CSV file through "clean.ipynb" in the "pandas_csv_cleaning" folder. Notes indicate which notebooks to run sequentially. 
-- PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
+#### sql_files:
+- schemas, unions, general queries and analysis in 5 files.
+
 
 #### under_150_pipeline
 - Series of 5 notebooks taking the largest dataset through normalization and light analysis producing a number of smaller csv files along the way.
 
 
+#### Deployment
+- Download the files from the US Treasury linked above, deploy the script in "python_csv" and then run the resulting CSV file through "clean.ipynb" in the "pandas_csv_cleaning" folder. Notes indicate which notebooks to run sequentially. 
+- PySpark script utilizes CSV file exported in clean_ppp3.ipynb.
+
+#### National stats for loans under $150k for respondents on racial data
+![statistics on smaller loans](docs/images/nat_small_stats.png)
+
+#### E.R.D.
+![SQL E.R.D.](docs/images/ERD.png)
+
+Brief explanation and analysis is here:  <a href='https://sherirosalia.github.io/cash_for_covid_clean_machine_pipeline/'><strong>PPP Loan Maps and Preliminary Analysis</strong></a>.
