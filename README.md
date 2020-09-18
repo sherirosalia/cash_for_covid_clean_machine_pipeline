@@ -1,7 +1,7 @@
 ## Small business cash for covid under the "Paycheck Protection Program"
 
 ### PPP loans - stimulus money exploration
-This is an E.T.L. / pipeline project that extractd, transformd and loads over 50 datasets released under the "Paycheck Protection Program" by the Small Business Association and made publically available by the U.S. Treasury Department. Otherwise known as "The PPP", these potentially forgivable loans are part of a covid relief package authored by the US Congress in an attempt to assist establishments to retain employees and "stay in business". 
+This is an E.T.L. / pipeline project that extracts, transforms and loads over 50 datasets released under the "Paycheck Protection Program" by the Small Business Association and made publically available by the U.S. Treasury Department. Otherwise known as "The PPP", these potentially forgivable loans are part of a covid relief package authored by the US Congress in an attempt to assist establishments to retain employees and "stay in business". 
 
 #### Webpage for this project
 The webpage associated with this project provides insight into some of the findings, light analysis and explanation of the data pipeline. You can access it here: 
