@@ -5,7 +5,7 @@ This is an E.T.L. / pipeline project that extracts, transforms and loads over 50
 
 #### Webpage for this project
 The webpage associated with this project provides insight into some of the findings, light analysis and explanation of the data pipeline. You can access it here: 
-Cash for covid <a href="https://sherirosalia.github.io/cash_for_covid_clean_machine/">Where did the Paycheck Protection Program money go?</a>
+Cash for covid <a href="https://sherirosalia.github.io/cash_for_covid_clean_machine_pipeline/">Where did the Paycheck Protection Program money go?</a>
 
 #### The data 
 Almost 5 million rows of data resulted from a compilation of the 51 CSV files downloaded <a href='https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data'><strong>here</strong></a>. 50 CSV files have state specific, anonymized information about loans up to 150k. The one remaining CSV is nationwide and reveals the identities of the borrowers who took out loans that start at $150k and go into the millions.
